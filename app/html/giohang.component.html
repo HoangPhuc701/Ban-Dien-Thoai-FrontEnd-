@@ -1,0 +1,24 @@
+<!-- <div class="modal-dialog" role="document">-->
+    <div class="modal-content d-flex align-items-center justify-content-center vh-100">
+      <h3>Giỏ Hàng</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let product of cart">
+          {{ product.tenDienThoai }} - <strong class="text-danger">{{ product.giaBan | currency:'VND':'symbol':'1.0-0' }}</strong>
+        </li>
+        <hr>
+        <strong><p>Tổng Tiền: <strong class="text-danger">{{ cartTotalValue | currency:'VND':'symbol':'1.0-0' }}</strong></p></strong>
+        <hr>
+
+        <form>
+          <label for="info1">Tên Khách Hàng</label><br>
+          <input [(ngModel)]="inputValueName" (input)="onInputChange($event)" type="text" id="info1"><br>
+          <label for="info2">Địa Chỉ</label><br>
+          <input  [(ngModel)]="inputDiaChi" (input)="onDiaChi($event)" type="text" id="info2"><br>
+          <label for="info3">Số Điện Thoại</label><br>
+          <input  [(ngModel)]="inputSDT" (input)="onSDT($event)" type="text" id="info3">
+        </form>
+
+        <a class="btn btn-primary" (click)="saveContract()">Thanh Toán</a>
+      </ul>
+    </div>
+<!--  </div>-->

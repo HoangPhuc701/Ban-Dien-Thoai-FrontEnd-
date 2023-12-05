@@ -1,0 +1,37 @@
+<div class="container p-5">
+  <h3 class="mb-3">ĐIỆN THOẠI GIÁ RẺ</h3>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let dienthoai of dienthoais">
+      <div class="card mb-2" style="width: 18rem;">
+<!--        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75/https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-tim-thumb-200x200.jpg" class="card-img-top" alt="..."-->
+<!--             (mouseover)="showProductInfo(dienthoai)"-->
+<!--             (mouseout)="hideProductInfo()">-->
+        <img src="./assets/image/{{dienthoai.hinhAnh}}" class="card-img-top" alt="hình ảnh">
+        <div class="card-body">
+          <span class="badge rounded-pill bg-warning text-dark">{{dienthoai.tenDienThoai}}</span>
+          <h5 class="card-title">{{dienthoai.tenDienThoai}}</h5>
+                    <span class="badge bg-secondary me-1">{{dienthoai.dungLuong}}</span>
+          <p class="card-text">
+            <strong class="text-danger">{{ dienthoai.giaBan | currency:'VND':'symbol':'1.0-0' }}</strong>
+          </p>
+
+          <a href="#" class="btn btn-primary"  (click)="addToCart(dienthoai)">Add to cart</a>
+          <a class="btn btn-primary" routerLink="/chitiet" (click)="xemItem(dienthoai)">Xem chi tiết</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!--  <div *ngIf="productInfo">-->
+<!--    <div >-->
+<!--    <p>{{ productInfo.tenDienThoai }}</p>-->
+<!--    <p>{{ productInfo.thongTinDienThoai }}</p>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; Thêm các thông tin khác của sản phẩm &ndash;&gt;-->
+<!--  </div>-->
+
+
+</div>
+<!--<router-outlet></router-outlet>-->

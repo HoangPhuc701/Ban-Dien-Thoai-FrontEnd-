@@ -1,0 +1,22 @@
+<manager></manager>
+<div class="container">
+<h1>Quản Lý Danh Sách Khách Hàng</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Họ Và Tên</th>
+    <th scope="col">Số Điện Thoại</th>
+    <th scope="col">Địa Chỉ</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of khachhangs; let i = index">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>{{ customer.tenKhachHang }}</td>
+    <td>{{ customer.sdtKH }}</td>
+    <td>{{ customer.diaChi }}</td>
+  </tr>
+  </tbody>
+</table>
+</div>

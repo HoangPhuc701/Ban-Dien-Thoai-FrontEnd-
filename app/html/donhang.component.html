@@ -1,0 +1,20 @@
+<div class="text-center d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <form class="modal-fullscreen-sm-down">
+    <div class="mb-3">
+      <label for="sdt" class="form-label">Nhập Số Điện Thoai</label>
+      <input type="text" [(ngModel)]="sdtKH"  #sdtKhInput class="form-control" id="sdt">
+    </div>
+    <button (click)="getDonHang()" type="submit" class="btn btn-primary">Submit</button>
+    <div>
+      <h5>Lịch sử mua hàng</h5>
+      <div *ngFor="let donhang of donhangs">
+        <hr>
+        <div class="card-body">
+          <p>Mã đơn hàng: {{donhang.maDonHang}} - {{donhang.ngayLapDon}}</p>
+          <h5 class="card-title">{{donhang.tenDienThoai}} - <strong class="text-danger">{{ donhang.giaBan | currency:'VND':'symbol':'1.0-0' }}</strong></h5>
+          <hr><br><p>Tổng Tiền: <strong class="text-danger">{{ donhang.tongTien/100 | currency:'VND':'symbol':'1.0-0' }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

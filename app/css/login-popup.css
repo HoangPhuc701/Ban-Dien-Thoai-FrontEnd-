@@ -1,0 +1,61 @@
+/* Tùy chỉnh kiểu dáng cho Modal Popup */
+.modal {
+  display: none; /* Mặc định ẩn modal */
+  position: fixed; /* Hiển thị modal trên cùng */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Cho phép cuộn nếu nội dung quá dài */
+  background-color: rgba(0, 0, 0, 0.4); /* Màu nền mờ khi modal hiển thị */
+}
+
+.modal-dialog {
+  max-width: 500px; /* Chiều rộng tối đa của modal */
+  margin: 100px auto; /* Căn giữa theo chiều ngang và dọc */
+  background-color: #fff; /* Màu nền của modal */
+  border: 1px solid #ccc; /* Viền modal */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+}
+
+.modal-content {
+  padding: 20px; /* Khoảng cách giữa nội dung và viền modal */
+}
+
+.modal-title {
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #000;
+}
+
+.close:hover {
+  color: #f00; /* Màu khi rê chuột qua nút Đóng */
+}
+
+/* Tùy chỉnh kiểu dáng cho nút Đăng nhập trong modal body */
+.modal-body .btn-primary {
+  background-color: #007bff; /* Màu nền nút */
+  color: #fff; /* Màu chữ */
+  border: none; /* Không có viền */
+}
+
+.modal-body .btn-primary:hover {
+  background-color: #0056b3; /* Màu khi rê chuột qua nút */
+}
+
+/* Tùy chỉnh kiểu dáng cho nút Đóng trong modal header */
+.modal-header .close {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Tùy chỉnh kiểu dáng cho nội dung form đăng nhập */
+.modal-body form {
+  /* Thêm quy tắc CSS tùy chỉnh cho form của bạn ở đây */
+}

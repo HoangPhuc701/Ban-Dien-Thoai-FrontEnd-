@@ -1,0 +1,28 @@
+<manager></manager>
+<div class="container">
+  <h1>Danh Sách Đơn Hàng</h1>
+  <input type="date" id="ngayLapDon" name="ngayLapDon">
+  <button (click)="filterData()">Lọc theo Ngày</button>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Mã Đơn</th>
+      <th scope="col">Ngày Lập Đơn</th>
+      <th scope="col">Số Điện Thoại</th>
+      <th scope="col">Tên Điện Thoại</th>
+      <th scope="col">Tổng Tiền</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let dh of donhangs; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ dh.maDonHang }}</td>
+      <td>{{ dh.ngayLapDon }}</td>
+      <td>{{ dh.sdtKH }}</td>
+      <td>{{ dh.tenDienThoai }}</td>
+      <td><strong class="text-danger">{{ dh.tongTien/100 | currency:'VND':'symbol':'1.0-0' }}</strong></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

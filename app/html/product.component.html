@@ -1,0 +1,50 @@
+<manager></manager>
+<div class="container">
+  <h1 class="text-center">SẢN PHẨM</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <label for="hangdt" >Nhà Cung Cấp</label>
+      <select class="form-select mb-3" aria-label="Default select example" id="hangdt" [ngModel]="hangdt" #hangdt>
+        <option selected disabled>Chọn Hãng điện thoại</option>
+        <option value="IP">I Phone</option>
+        <option value="SS">SamSung</option>
+        <option value="XA">Xiaomi</option>
+        <option value="RM">Realme</option>
+        <option value="VV">ViVo</option>
+        <option value="NO">Nokia</option>
+        <option value="OP">OPPO</option>
+      </select>
+      <label>Tên điện thoại</label>
+      <input type="text" class="form-control mb-3" id="tendt" placeholder="Tên điện thoại" [ngModel]="tendt" #tendt>
+      <div class="mb-3">
+        <label for="mota" class="form-label">Mô tả sản phẩm</label>
+        <textarea class="form-control" id="mota" rows="3" [ngModel]="mota" #mota></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="hinhanh" class="form-label">Hình ảnh sản phẩm</label>
+        <input class="form-control" type="file" id="hinhanh" [ngModel]="hinhanh" #hinhanh>
+      </div>
+      <label  >Dung lượng</label>
+      <select class="form-select mb-3" aria-label="Default select example" id="dungluong" [ngModel]="dungluong" #dungluong>
+        <option selected disabled>Dung lượng</option>
+        <option value="4GB">4GB</option>
+        <option value="8GB">8GB</option>
+        <option value="16GB">16GB</option>
+        <option value="32GB">32GB</option>
+        <option value="64GB">64GB</option>
+        <option value="128GB">128GB</option>
+        <option value="256GB">256GB</option>
+        <option value="512GB">512GB</option>
+        <option value="1TB">1TB</option>
+      </select>
+<!--      <input type="text" class="form-control mb-3" id="dungluong" placeholder="Dung Lượng">-->
+      <label>Số lượng</label>
+      <input type="number" class="form-control mb-3" id="soluong" placeholder="Số Lượng" [ngModel]="soluong" #soluong>
+      <label>Giá bán</label>
+      <input type="number" class="form-control mb-3" id="giaban" [ngModel]="giaban" #giaban placeholder="Giá bán">
+      <button (click)="Them()" class="btn btn-primary">Thêm</button>
+      <button class="btn btn-primary">Xóa</button>
+      <button class="btn btn-primary">Sửa</button>
+    </div>
+  </div>
+</div>

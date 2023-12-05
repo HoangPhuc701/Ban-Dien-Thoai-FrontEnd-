@@ -1,0 +1,82 @@
+<nav class="navbar navbar-light bg-light" >
+  <div class="container-fluid" >
+    <a routerLink="/" class="navbar-brand">PHONE STORE</a>
+    <form class="d-flex input-group w-auto">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" [(ngModel)]="keyword"/>
+      <ul>
+        <li *ngFor="let search of filterPeople()">
+          {{ search.tenDienThoai }} ({{ search.giaBan }})
+        </li>
+      </ul>
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search" ></i>
+      </span>
+
+      <!--test-->
+      <ul class="navbar-nav">
+        <!-- Badge -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/giohang">
+            <span class="badge badge-pill bg-danger">{{ cart.length }}</span>
+            <button  type="button" class="fas fa-shopping-cart"></button>
+
+          </a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center" >
+        <div class="modal-lg">
+<!--          <a  (click)="toggleLoginVisibility()" class="btn btn-link px-3 me-2">Login</a>-->
+          <a  routerLink="/login" class="btn btn-link px-3 me-2">Login</a>
+<!--          <login *ngIf="isLoginPopupVisible" (closePopup)="isLoginPopupVisible = false"></login>-->
+        </div>
+        <div class="modal-lg">
+          <a routerLink="lichsu" class="btn btn-link px-3 me-2">Lịch sử mua hàng</a>
+          <!--          <login *ngIf="isLoginPopupVisible" (closePopup)="isLoginPopupVisible = false"></login>-->
+        </div>
+        <a type="button" class="btn btn-primary me-3">Sign up for free</a>
+        <a class="btn btn-dark px-3" href="https://github.com/hoangphuc701" role="button"><i class="fab fa-github"></i></a>
+      </div>
+
+
+    </form>
+  </div>
+</nav>
+
+<!--<div *ngIf="isLogiVisisible">-->
+<!--  <login></login>-->
+<!--</div>-->
+<!--<div *ngIf="DonHangVisisible">-->
+<!--  <app-donhang></app-donhang>-->
+<!--</div>-->
+
+<!--<div *ngIf="isCartVisible">-->
+<!--  <div id="createTypeModal" tabindex="-1" role="dialog" class="modal"></div>-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <h3>Giỏ Hàng</h3>-->
+<!--      <ul class="list-group">-->
+<!--        <li class="list-group-item" *ngFor="let product of cart">-->
+<!--          {{ product.tenDienThoai }} - <strong class="text-danger">{{ product.giaBan | currency:'VND':'symbol':'1.0-0' }}</strong>-->
+<!--        </li>-->
+<!--        <hr>-->
+<!--        <strong><p>Tổng Tiền: <strong class="text-danger">{{ cartTotalValue | currency:'VND':'symbol':'1.0-0' }}</strong></p></strong>-->
+<!--        <hr>-->
+
+<!--        <form>-->
+<!--        <label for="info1">Tên Khách Hàng</label><br>-->
+<!--        <input [(ngModel)]="inputValueName" (input)="onInputChange($event)" type="text" id="info1"><br>-->
+<!--        <label for="info2">Địa Chỉ</label><br>-->
+<!--        <input  [(ngModel)]="inputDiaChi" (input)="onDiaChi($event)" type="text" id="info2"><br>-->
+<!--        <label for="info3">Số Điện Thoại</label><br>-->
+<!--        <input  [(ngModel)]="inputSDT" (input)="onSDT($event)" type="text" id="info3">-->
+<!--        </form>-->
+
+<!--        <a href="#" class="btn btn-primary" (click)="saveContract()">Thanh Toán</a>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<router-outlet></router-outlet>
+
+
